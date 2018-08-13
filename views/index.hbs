@@ -1,2 +1,10 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+
+<form method="post" action="/">
+    <textarea name="content" id="content" cols="150" rows="10"></textarea>
+    <script>
+        CKEDITOR.replace('content');
+    </script>
+    <input type="submit" value="Submit">
+</form>
