@@ -1,0 +1,116 @@
+<style>
+    .form-group {
+        margin-bottom: 30px;
+    }
+</style>
+
+
+
+<div class="container">
+    <div class="row float-left">
+
+        <form action="" method="post">
+
+            <div class="form-group col-12 float-left">
+                <label for="question"> Question </label>
+                <textarea class="editor" name="question" id="question" cols="30" rows="10"> {{{question}}} </textarea>
+            </div>
+
+
+            {{#each options}}
+
+            <div class="form-group col-6 float-left">
+                {{#if is_correct}}
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" checked>
+                    <label class="form-check-label" for="exampleCheck1">Correct </label>
+                </div>
+                {{else}}
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label" for="exampleCheck1"> Wrong </label>
+                </div>
+                {{/if}}
+                <textarea class="editor" name="options[]" cols="30" rows="10">{{opt}}</textarea>
+            </div>
+            {{/each}}
+
+            <div class="form-group col-6  float-left">
+                <label for="explanation"> explanation </label>
+                <textarea class="editor" name="explanation" id="explanation" cols="30" rows="10">{{explanation}}</textarea>
+            </div>
+
+
+            <div class="input_fields_wrap form-group col-6  float-left" style="margin-bottom:5px">
+                <button class="add_field_button btn btn-primary">Add More Fields</button>
+            </div>
+
+
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+<canvas id="imgCanvas" />
+
+
+<script>
+    $("textarea").each(function () {
+        CKEDITOR.replace(this);
+    });
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        var max_fields = 20; //maximum input boxes allowed
+        var wrapper = $(".input_fields_wrap"); //Fields wrapper
+        var add_button = $(".add_field_button"); //Add button ID
+
+        var x = 1; //initlal text box count
+        $(add_button).click(function (e) { //on add input button click
+            e.preventDefault();
+            if (x < max_fields) { //max input box allowed
+                x++; //text box increment
+                $(wrapper).append('<div><input class="form-control" type="text" name="tags[]" placeholder="tags"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            }
+        });
+
+        $(wrapper).on("click", ".remove_field", function (e) { //user click on remove text
+            e.preventDefault(); $(this).parent('div').remove(); x--;
+        })
+    });
+</script>
+
+<script>
+    var allImages = document.getElementsByTagName('img');
+
+    for (var i = 0; i < allImages.length; i++) {
+        // to open all photos in new tabs:
+        // window.open(allImages[i].src, '_blank');
+        allImages[i].src = 'url_to_cat_image';
+    }
+</script>
+
+
+<script>
+    function getBase64Image(img) {
+        var can = document.getElementById("imgCanvas");
+        var ctx = can.getContext("2d");
+        ctx.drawImage(img, 10, 10);
+        var encodedBase = can.toDataURL();
+        return encodedBase;
+    }
+
+
+
+    var allImages = document.getElementsByTagName('img');
+
+    for (var i = 0; i < allImages.length; i++) {
+        var base64 = getBase64Image(all_images[i]);
+        all_images[i].src = base64;
+        alert(base64);
+    }
+
+</script>
