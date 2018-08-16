@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "base64-img": "^1.0.4",
     "cheerio": "^1.0.0-rc.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",

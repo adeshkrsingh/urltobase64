@@ -1,9 +1,10 @@
 var express = require("express");
 var router = express.Router();
 const cheerio = require("cheerio");
+var base64Img = require('base64-img');
 
 var myHtml = `<div class="question_basic position-relative 
-      
+
 not_attempted
 individual_question" id="question_basic" data-topic-name="" data-topic-id="">
 
@@ -402,54 +403,126 @@ router.get("/", function(req, res, next) {
 router.post("/", function(req, res, next) {
     console.log("RUNNING POST METHOD");
     const $ = cheerio.load( req.body.content );
-    // console.log(req.body.content );
-  var list = [], options = []; let correctOpt = 0; let OptionNumber = 0; let explanation = "";
+    var list = [], options = []; let correctOpt = 0; let OptionNumber = 0; let explanation = "";
 
-  $('.question_basic')
-    .find("div > .question_text ")
-    .each(function(index, element) {
-      list.push($(element).html());
+    var image_base64_convert_Promise = new Promise(function(resolve, reject){
 
-      console.log( $(element).html().trim() );
-      $(this).parent().find('div > table > tbody > tr >  .option_text').each(function(i, elemt) {
-        OptionNumber++;
+        $("img").each(function() {
+            var old_src=$(this).attr("src");
 
-        console.log(OptionNumber, $(elemt).text().trim() );
-        let ch =  $(this).parent().find('.q_tbl_optn_col_1 > i').each(function(i3, e3) {
-            console.log( 'Correct Opt : ',OptionNumber,  $(e3).attr('data-original-title').trim() );
+            base64Img.requestBase64(old_src, function(err, res, base64data) {
+                // console.log('URL', old_src);
+                // console.log('err', err);
+                // console.log('my base64data', base64data);
+                $(this).attr("src", base64data);
+            });
         });
+     });
 
-        if(ch == '') {
-            console.log('*****');
-            options.push({
-                opt: $(elemt).text().trim(),
-                is_correct: 0,
-            });
-        } else {
-            console.log('######');
-            options.push({
-                opt: $(elemt).text().trim(),
-                is_correct: 1,
-            });
-        }
-    });
 
-    if( $(this).parent().find('.explanation_text').children().first().text().trim().length > 0 ) {
-        explanation = $(this).parent().find('.explanation_text').children().first().html().trim();
-        console.log( explanation );
-    } else {
-        explanation = $(this).parent().find('.explanation_text').html().trim();
-        console.log( explanation );
-    }
+     const extraxt_promise = new Promise(resolve => {
+            $('.question_basic')
+                .find("div > .question_text ")
+                .each(function(index, element) {
+                list.push($(element).html());
 
-    // console.log( $(this).parent().find('.explanation_text').children().first().text() );
-    OptionNumber = 0;
-    });
-  res.render("add_question", { title: "Express",
-                                question: list[0],
-                                options: options,
-                                explanation: explanation,
-                                 });
+                console.log( $(element).html().trim() );
+                $(this).parent().find('div > table > tbody > tr >  .option_text').each(function(i, elemt) {
+                    OptionNumber++;
+
+                    console.log(OptionNumber, $(elemt).text().trim() );
+                    let ch =  $(this).parent().find('.q_tbl_optn_col_1 > i').each(function(i3, e3) {
+                        console.log( 'Correct Opt : ',OptionNumber,  $(e3).attr('data-original-title').trim() );
+                    });
+
+                    if(ch == '') {
+                        console.log('*****');
+                        options.push({
+                            opt: $(elemt).text().trim(),
+                            is_correct: 0,
+                        });
+                    } else {
+                        console.log('######');
+                        options.push({
+                            opt: $(elemt).text().trim(),
+                            is_correct: 1,
+                        });
+                    }
+                });
+
+                if( $(this).parent().find('.explanation_text').children().first().text().trim().length > 0 ) {
+                    explanation = $(this).parent().find('.explanation_text').children().first().html().trim();
+                    console.log( explanation );
+                } else {
+                    explanation = $(this).parent().find('.explanation_text').html().trim();
+                    console.log( explanation );
+                }
+
+                // console.log( $(this).parent().find('.explanation_text').children().first().text() );
+                OptionNumber = 0;
+                });
+     });
+
+
+     Promise.all([image_base64_convert_Promise, extraxt_promise]).then(responses => {
+        console.log(list[0]);
+         res.send('OK');
+      });
+
+    // console.log(req.body.content );
+//   var list = [], options = []; let correctOpt = 0; let OptionNumber = 0; let explanation = "";
+
+//   $('.question_basic')
+//     .find("div > .question_text ")
+//     .each(function(index, element) {
+//       list.push($(element).html());
+
+//       console.log( $(element).html().trim() );
+//       $(this).parent().find('div > table > tbody > tr >  .option_text').each(function(i, elemt) {
+//         OptionNumber++;
+
+//         console.log(OptionNumber, $(elemt).text().trim() );
+//         let ch =  $(this).parent().find('.q_tbl_optn_col_1 > i').each(function(i3, e3) {
+//             console.log( 'Correct Opt : ',OptionNumber,  $(e3).attr('data-original-title').trim() );
+//         });
+
+//         if(ch == '') {
+//             console.log('*****');
+//             options.push({
+//                 opt: $(elemt).text().trim(),
+//                 is_correct: 0,
+//             });
+//         } else {
+//             console.log('######');
+//             options.push({
+//                 opt: $(elemt).text().trim(),
+//                 is_correct: 1,
+//             });
+//         }
+//     });
+
+//     if( $(this).parent().find('.explanation_text').children().first().text().trim().length > 0 ) {
+//         explanation = $(this).parent().find('.explanation_text').children().first().html().trim();
+//         console.log( explanation );
+//     } else {
+//         explanation = $(this).parent().find('.explanation_text').html().trim();
+//         console.log( explanation );
+//     }
+
+//     // console.log( $(this).parent().find('.explanation_text').children().first().text() );
+//     OptionNumber = 0;
+//     });
+// //   res.render("add_question", { title: "Express",
+// //                                 question: list[0],
+// //                                 options: options,
+// //                                 explanation: explanation,
+// //                                  });
+
+// res.send(JSON.stringify({ question: list[0],
+//                                     options: options,
+//                                     explanation: explanation, }))
+
+
 });
 
 module.exports = router;
