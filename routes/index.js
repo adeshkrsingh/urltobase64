@@ -1,528 +1,146 @@
 var express = require("express");
 var router = express.Router();
 const cheerio = require("cheerio");
-var base64Img = require('base64-img');
-
-var myHtml = `<div class="question_basic position-relative 
-
-not_attempted
-individual_question" id="question_basic" data-topic-name="" data-topic-id="">
-
-<strong> Question
-    <span class="question_number margin-r-5">2 of 20</span>
-
-
-    <span class="text-orange">
-        <i class="fa fa-info-circle"></i> You did not attempt this Question. </span>
-
-
-</strong>
-<div class="question_text ">
-    Either the committee on course design or the committee on college operation __________these matter.
-</div>
-<table class=" question_option_table table no-border thin_row">
-
-    <tbody>
-        <tr>
-            <td class="q_tbl_optn_col_1">
-
-            </td>
-            <td class="q_tbl_optn_col_1">
-
-
-
-            </td>
-            <td class="q_tbl_optn_col_2">
-                <strong>A.</strong>
-            </td>
-            <td class="q_tbl_optn_col_3 option_text" data-option-id="569a57102527e427c11f3c90"> decide</td>
-        </tr>
-
-        <tr>
-            <td class="q_tbl_optn_col_1">
-
-            </td>
-            <td class="q_tbl_optn_col_1">
-
-
-
-            </td>
-            <td class="q_tbl_optn_col_2">
-                <strong>B.</strong>
-            </td>
-            <td class="q_tbl_optn_col_3 option_text" data-option-id="569a57102527e427c11f3c91">
-                <p>decide on&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            </td>
-        </tr>
-
-        <tr>
-            <td class="q_tbl_optn_col_1">
-
-            </td>
-            <td class="q_tbl_optn_col_1">
-
-
-
-            </td>
-            <td class="q_tbl_optn_col_2">
-                <strong>C.</strong>
-            </td>
-            <td class="q_tbl_optn_col_3 option_text" data-option-id="569a57102527e427c11f3c92"> decide in</td>
-        </tr>
-
-        <tr>
-            <td class="q_tbl_optn_col_1">
-
-            </td>
-            <td class="q_tbl_optn_col_1">
-
-
-                <i class="fa fa-check-circle text-green" title="" data-original-title="This is the correct option"></i>
-
-
-            </td>
-            <td class="q_tbl_optn_col_2">
-                <strong>D.</strong>
-            </td>
-            <td class="q_tbl_optn_col_3 option_text" data-option-id="569a57102527e427c11f3c93"> decides</td>
-        </tr>
-
-    </tbody>
-</table>
-
-<strong> Explanation : </strong>
-<div class="explanation_text margin-b-10">
-    Committee is a singular entity , hence the singular form "decides" is the correct answer.
-</div>
-
-<div class="bg-gray padding-5">
-    <div class="text-center">
-        <strong> Question Analytics </strong>
-    </div>
-    <ul class="clearfix two_row_ul">
-        <li>
-            <div class="padding-t-10  border-bottom">
-                <span class="font-14 text-primary padding-5">12359 users</span>
-                <!-- <span class="font-12 text-gray-dark">/ </span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">Attempted</div>
-        </li>
-        <li>
-            <div class="padding-t-10  border-bottom">
-                <span class="font-14 text-green padding-5">6152 users</span>
-                <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">
-                <i class="fa fa-check-circle text-green"></i>
-                Solved Correctly
-            </div>
-        </li>
-        <li>
-            <div class="padding-t-10 border-bottom">
-                <span class="font-14 text-red padding-5">6207 users</span>
-                <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">
-                <i class="fa fa-times-circle text-red"></i>
-                Solved Incorrectly</div>
-        </li>
-        <li>
-            <div class="padding-t-10 border-bottom">
-                <span class="font-16 text-primary padding-5"> 49.78 %</span>
-                <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">
-                <i class="fa fa-dot-circle-o text-primary"></i>
-                Accuracy
-            </div>
-        </li>
-        <li>
-            <div class="padding-t-10 border-bottom">
-                <span class="font-14 text-primary padding-5">0.0 secs </span>
-                <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">
-                <i class="fa fa-clock-o text-primary"></i>
-                Your Time
-            </div>
-        </li>
-
-        <li>
-            <div class="padding-t-10 border-bottom">
-                <span class="font-14 text-gray-dark padding-5">42.8 secs</span>
-                <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">
-                <i class="fa fa-clock-o text-gray-dark"></i>
-                Avg. Solving Time
-            </div>
-        </li>
-
-
-        <li>
-            <div class="padding-t-10 border-bottom">
-                <span class="font-14 text-yellow padding-5">0.0 secs </span>
-                <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">
-                <i class="fa fa-hourglass-half text-yellow"></i>
-                Fastest Solving Time
-            </div>
-        </li>
-    </ul>
-
-</div>
-</div>
-
-
-
-<div class="question_basic position-relative 
-      
-not_attempted
-individual_question" id="question_basic" data-topic-name="" data-topic-id="">
-
-<strong> Question
-    <span class="question_number margin-r-5">1 of 20</span>
-
-
-    <span class="text-orange">
-        <i class="fa fa-info-circle"></i> You did not attempt this Question. </span>
-
-
-</strong>
-<div class="question_text ">
-    <p>I __________ &nbsp;just one proper meal since yesterday morning
-        <br>
-    </p>
-</div>
-<table class=" question_option_table table no-border thin_row">
-
-    <tbody>
-        <tr>
-            <td class="q_tbl_optn_col_1">
-
-            </td>
-            <td class="q_tbl_optn_col_1">
-
-
-
-            </td>
-            <td class="q_tbl_optn_col_2">
-                <strong>A.</strong>
-            </td>
-            <td class="q_tbl_optn_col_3 option_text" data-option-id="569a55c92527e427c11f3c89">
-                <p>had</p>
-            </td>
-        </tr>
-
-        <tr>
-            <td class="q_tbl_optn_col_1">
-
-            </td>
-            <td class="q_tbl_optn_col_1">
-
-
-
-            </td>
-            <td class="q_tbl_optn_col_2">
-                <strong>B.</strong>
-            </td>
-            <td class="q_tbl_optn_col_3 option_text" data-option-id="569a55c92527e427c11f3c8a">
-                <p>ate</p>
-            </td>
-        </tr>
-
-        <tr>
-            <td class="q_tbl_optn_col_1">
-
-            </td>
-            <td class="q_tbl_optn_col_1">
-
-
-                <i class="fa fa-check-circle text-green" title="" data-original-title="This is the correct option"></i>
-
-
-            </td>
-            <td class="q_tbl_optn_col_2">
-                <strong>C.</strong>
-            </td>
-            <td class="q_tbl_optn_col_3 option_text" data-option-id="569a55c92527e427c11f3c8b">
-                <p>have had</p>
-            </td>
-        </tr>
-
-        <tr>
-            <td class="q_tbl_optn_col_1">
-
-            </td>
-            <td class="q_tbl_optn_col_1">
-
-
-
-            </td>
-            <td class="q_tbl_optn_col_2">
-                <strong>D.</strong>
-            </td>
-            <td class="q_tbl_optn_col_3 option_text" data-option-id="569a55c92527e427c11f3c8c">
-                <p>have eaten</p>
-            </td>
-        </tr>
-
-    </tbody>
-</table>
-
-<strong> Explanation : </strong>
-<div class="explanation_text margin-b-10">
-    <p>
-        <span style="">I have had just one proper meal since yesterday morning.</span>
-    </p>
-    <p>
-        <span style="">For Explanation Read:
-            <br>
-        </span>http://www.bbc.co.uk/worldservice/learningenglish/grammar/learnit/learnitv343.shtml
-        <br>
-    </p>
-</div>
-
-<div class="bg-gray padding-5">
-    <div class="text-center">
-        <strong> Question Analytics </strong>
-    </div>
-    <ul class="clearfix two_row_ul">
-        <li>
-            <div class="padding-t-10  border-bottom">
-                <span class="font-14 text-primary padding-5">12531 users</span>
-                <!-- <span class="font-12 text-gray-dark">/ </span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">Attempted</div>
-        </li>
-        <li>
-            <div class="padding-t-10  border-bottom">
-                <span class="font-14 text-green padding-5">4280 users</span>
-                <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">
-                <i class="fa fa-check-circle text-green"></i>
-                Solved Correctly
-            </div>
-        </li>
-        <li>
-            <div class="padding-t-10 border-bottom">
-                <span class="font-14 text-red padding-5">8251 users</span>
-                <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">
-                <i class="fa fa-times-circle text-red"></i>
-                Solved Incorrectly</div>
-        </li>
-        <li>
-            <div class="padding-t-10 border-bottom">
-                <span class="font-16 text-primary padding-5"> 34.16 %</span>
-                <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">
-                <i class="fa fa-dot-circle-o text-primary"></i>
-                Accuracy
-            </div>
-        </li>
-        <li>
-            <div class="padding-t-10 border-bottom">
-                <span class="font-14 text-primary padding-5">0.0 secs </span>
-                <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">
-                <i class="fa fa-clock-o text-primary"></i>
-                Your Time
-            </div>
-        </li>
-
-        <li>
-            <div class="padding-t-10 border-bottom">
-                <span class="font-14 text-gray-dark padding-5">35.51 secs</span>
-                <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">
-                <i class="fa fa-clock-o text-gray-dark"></i>
-                Avg. Solving Time
-            </div>
-        </li>
-
-
-        <li>
-            <div class="padding-t-10 border-bottom">
-                <span class="font-14 text-yellow padding-5">0.0 secs </span>
-                <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
-            </div>
-            <div class="text-gray-dark padding-t-5">
-                <i class="fa fa-hourglass-half text-yellow"></i>
-                Fastest Solving Time
-            </div>
-        </li>
-    </ul>
-
-</div>
-</div>`;
-
-const $ = cheerio.load(myHtml);
+var base64Img = require("base64-img");
 
 /* GET home page. */
 
 router.get("/", function(req, res, next) {
+  //   var list = [], options = []; let correctOpt = 0; let OptionNumber = 0;
+  //   $('div[id="question_basic"]')
+  //     .find("div > .question_text ")
+  //     .each(function(index, element) {
+  //       list.push($(element).text());
 
-//   var list = [], options = []; let correctOpt = 0; let OptionNumber = 0;
-//   $('div[id="question_basic"]')
-//     .find("div > .question_text ")
-//     .each(function(index, element) {
-//       list.push($(element).text());
+  //       console.log( $(element).html().trim() );
+  //       $(this).parent().find('div > table > tbody > tr >  .option_text').each(function(i, elemt) {
+  //         OptionNumber++;
+  //         console.log(OptionNumber, $(elemt).text().trim() );
+  //         $(this).parent().find('.q_tbl_optn_col_1 > i').each(function(i3, e3) {
+  //             console.log( 'Correct Opt : ',OptionNumber,  $(e3).attr('data-original-title').trim() );
+  //         });
+  //     });
 
-//       console.log( $(element).html().trim() );
-//       $(this).parent().find('div > table > tbody > tr >  .option_text').each(function(i, elemt) {
-//         OptionNumber++;
-//         console.log(OptionNumber, $(elemt).text().trim() );
-//         $(this).parent().find('.q_tbl_optn_col_1 > i').each(function(i3, e3) {
-//             console.log( 'Correct Opt : ',OptionNumber,  $(e3).attr('data-original-title').trim() );
-//         });
-//     });
+  //     if( $(this).parent().find('.explanation_text').children().first().text().trim().length > 0 ) {
+  //         console.log( $(this).parent().find('.explanation_text').children().first().html().trim() );
+  //     } else {
+  //         console.log( $(this).parent().find('.explanation_text').html().trim() );
+  //     }
 
-//     if( $(this).parent().find('.explanation_text').children().first().text().trim().length > 0 ) {
-//         console.log( $(this).parent().find('.explanation_text').children().first().html().trim() );
-//     } else {
-//         console.log( $(this).parent().find('.explanation_text').html().trim() );
-//     }
-
-//     // console.log( $(this).parent().find('.explanation_text').children().first().text() );
-//     OptionNumber = 0;
-//     });
+  //     // console.log( $(this).parent().find('.explanation_text').children().first().text() );
+  //     OptionNumber = 0;
+  //     });
   res.render("index", { title: "Express" });
 });
 
-
-
-
-
 router.post("/", function(req, res, next) {
-    console.log("RUNNING POST METHOD");
-    const $ = cheerio.load( req.body.content );
-    var list = [], options = []; let correctOpt = 0; let OptionNumber = 0; let explanation = "";
+  // console.log("RUNNING POST METHOD");
+  // const $ = cheerio.load( req.body.content );
 
-    var image_base64_convert_Promise = new Promise(function(resolve, reject){
+  var QUESTION = "";
+  var OPTIONS = [];
+  var correctOpt = 0;
+  var OptionNumber = 0;
+  var EXPLANATION = "";
+  var CombinedArray = [];
 
-        $("img").each(function() {
-            var old_src=$(this).attr("src");
+  let BASEHTML = cheerio.load(  req.body.content  );
 
-            base64Img.requestBase64(old_src, function(err, res, base64data) {
-                // console.log('URL', old_src);
-                // console.log('err', err);
-                // console.log('my base64data', base64data);
-                $(this).attr("src", base64data);
-            });
-        });
-     });
+  var promises = [];
 
-
-     const extraxt_promise = new Promise(resolve => {
-            $('.question_basic')
-                .find("div > .question_text ")
-                .each(function(index, element) {
-                list.push($(element).html());
-
-                console.log( $(element).html().trim() );
-                $(this).parent().find('div > table > tbody > tr >  .option_text').each(function(i, elemt) {
-                    OptionNumber++;
-
-                    console.log(OptionNumber, $(elemt).text().trim() );
-                    let ch =  $(this).parent().find('.q_tbl_optn_col_1 > i').each(function(i3, e3) {
-                        console.log( 'Correct Opt : ',OptionNumber,  $(e3).attr('data-original-title').trim() );
-                    });
-
-                    if(ch == '') {
-                        console.log('*****');
-                        options.push({
-                            opt: $(elemt).text().trim(),
-                            is_correct: 0,
-                        });
-                    } else {
-                        console.log('######');
-                        options.push({
-                            opt: $(elemt).text().trim(),
-                            is_correct: 1,
-                        });
-                    }
-                });
-
-                if( $(this).parent().find('.explanation_text').children().first().text().trim().length > 0 ) {
-                    explanation = $(this).parent().find('.explanation_text').children().first().html().trim();
-                    console.log( explanation );
-                } else {
-                    explanation = $(this).parent().find('.explanation_text').html().trim();
-                    console.log( explanation );
-                }
-
-                // console.log( $(this).parent().find('.explanation_text').children().first().text() );
-                OptionNumber = 0;
-                });
-     });
-
-
-     Promise.all([image_base64_convert_Promise, extraxt_promise]).then(responses => {
-        console.log(list[0]);
-         res.send('OK');
+  var DECODE_IMAGE = new Promise((resolve, reject) => {
+    var x = BASEHTML("img").each(function() {
+      var old_src = BASEHTML(this).attr("src");
+       var promise = BASE_64_CONVERTER(old_src).then(data => {
+        if( BASEHTML(this).attr("src", data) ) {
+          console.log('changed');
+          console.log(BASEHTML(this).attr() );
+        } else {
+          console.log('not changed');
+        }
+        // return resolve(BASEHTML);
+      }, (error) => {
+        return reject();
       });
+      promises.push(promise); 
+      // return resolve(BASEHTML);
+    });
+      return resolve(BASEHTML);
 
-    // console.log(req.body.content );
-//   var list = [], options = []; let correctOpt = 0; let OptionNumber = 0; let explanation = "";
+  });
 
-//   $('.question_basic')
-//     .find("div > .question_text ")
-//     .each(function(index, element) {
-//       list.push($(element).html());
+  var EXTRACT_INFO = new Promise((resolve, reject) => {
+    BASEHTML('.question_basic').find("div > .question_text ").each(function(index, element) {
+        // list.push(BASEHTML(element).html());
+        QUESTION = BASEHTML(element).html();
 
-//       console.log( $(element).html().trim() );
-//       $(this).parent().find('div > table > tbody > tr >  .option_text').each(function(i, elemt) {
-//         OptionNumber++;
+        BASEHTML(this).parent().find('div > table > tbody > tr >  .option_text').each(function(i, elemt) {
+            OptionNumber++;
+            let ch =  BASEHTML(this).parent().find('.q_tbl_optn_col_1 > i').each(function(i3, e3) {
+                //   console.log( 'Correct Opt : ',OptionNumber,  BASEHTML(e3).attr('data-original-title').trim() );
+                // This is correct option detected
+            });
+            if(ch == '') {
+                OPTIONS.push({  opt: BASEHTML(elemt).text().trim(), is_correct: 0,  });
+            } else {
+                OPTIONS.push({ opt: BASEHTML(elemt).text().trim(), is_correct: 1, });
+            }
+        });
 
-//         console.log(OptionNumber, $(elemt).text().trim() );
-//         let ch =  $(this).parent().find('.q_tbl_optn_col_1 > i').each(function(i3, e3) {
-//             console.log( 'Correct Opt : ',OptionNumber,  $(e3).attr('data-original-title').trim() );
-//         });
+        if( BASEHTML(this).parent().find('.explanation_text').children().first().text().trim().length > 0 ) {
+            // if multiple tags are used there
+            EXPLANATION = BASEHTML(this).parent().find('.explanation_text').children().first().html().trim();
+        } else {
+            // if it has only explanation
+            EXPLANATION = BASEHTML(this).parent().find('.explanation_text').html().trim();
+        }
 
-//         if(ch == '') {
-//             console.log('*****');
-//             options.push({
-//                 opt: $(elemt).text().trim(),
-//                 is_correct: 0,
-//             });
-//         } else {
-//             console.log('######');
-//             options.push({
-//                 opt: $(elemt).text().trim(),
-//                 is_correct: 1,
-//             });
-//         }
-//     });
 
-//     if( $(this).parent().find('.explanation_text').children().first().text().trim().length > 0 ) {
-//         explanation = $(this).parent().find('.explanation_text').children().first().html().trim();
-//         console.log( explanation );
-//     } else {
-//         explanation = $(this).parent().find('.explanation_text').html().trim();
-//         console.log( explanation );
-//     }
+        var temp_sub_document = {
+                question: QUESTION.toString().split('"').join("'"),
+                options: OPTIONS,
+                explanation: EXPLANATION.toString().split('"').join("'"),
+            };
 
-//     // console.log( $(this).parent().find('.explanation_text').children().first().text() );
-//     OptionNumber = 0;
-//     });
-// //   res.render("add_question", { title: "Express",
-// //                                 question: list[0],
-// //                                 options: options,
-// //                                 explanation: explanation,
-// //                                  });
 
-// res.send(JSON.stringify({ question: list[0],
-//                                     options: options,
-//                                     explanation: explanation, }))
+        CombinedArray.push(temp_sub_document);
 
+        QUESTION = "";
+        options = [];
+        explanation = "";
+        EXPLANATION = "";
+        OPTIONS = [];
+    });
+    return resolve();
+  });
+
+  Promise.all(promises).then(() => {
+
+  
+  DECODE_IMAGE.then((data) => {
+    console.log(data, "\n", BASEHTML);
+    res.send( BASEHTML.html() );
+  })
+})
+  // var myExtraction = Promise.all([DECODE_IMAGE, EXTRACT_INFO]);
+  // myExtraction.then(data => {
+  //   res.send( JSON.stringify(CombinedArray) );
+  // });
 
 });
+
+
+
+var BASE_64_CONVERTER = function(old_src) {
+  return new Promise(function(resolve, reject) {
+    base64Img.requestBase64(old_src, function(err, res, base64data) {
+      if (err) {
+        console.log(err);
+      } else {
+        return resolve(base64data);
+      }
+    });
+  });
+};
 
 module.exports = router;
