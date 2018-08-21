@@ -35,14 +35,12 @@ router.post("/", function (req, res, next) {
 
 
   var promises = [];
-
-
   var DECODE_IMAGE = new Promise((resolve, reject) => {
     var x = BASEHTML("img").each(function () {
       var old_src = BASEHTML(this).attr("src");
 
       var  promise = BASE_64_CONVERTER(old_src).then(data => {
-        console.log('DATA :', data)
+        // console.log('DATA :', data)
         return promises.push( BASEHTML(this).attr("src", data) );
         // if (BASEHTML(this).attr("src", data)) {
         //   console.log('changed');
@@ -56,9 +54,9 @@ router.post("/", function (req, res, next) {
         return reject();
       });
 
-      
+      // return Promise.all(promise);
     });
-    resolve(BASEHTML);
+     resolve(BASEHTML);
 
   });
 
