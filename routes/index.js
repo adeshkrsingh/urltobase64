@@ -21,6 +21,7 @@ router.get("/", function (req, res, next) {
 
 router.post("/", function (req, res, next) {
   console.log("RUNNING POST METHOD");
+  // console.log(req.body);
   // const $ = cheerio.load( req.body.content );
 
   var QUESTION = "";
@@ -29,37 +30,44 @@ router.post("/", function (req, res, next) {
   var OptionNumber = 0;
   var EXPLANATION = "";
   var CombinedArray = [];
+  var ImageSrcArray = [];
 
-  let BASEHTML = cheerio.load(req.body.content);
+  let BASEHTML = cheerio.load((req.body.content) );
 
 
 
   var promises = [];
-  var DECODE_IMAGE = new Promise((resolve, reject) => {
-    var x = BASEHTML("img").each(function () {
-      var old_src = BASEHTML(this).attr("src");
 
-      var  promise = BASE_64_CONVERTER(old_src).then(data => {
-        // console.log('DATA :', data)
-        return promises.push( BASEHTML(this).attr("src", data) );
-        // if (BASEHTML(this).attr("src", data)) {
-        //   console.log('changed');
-        //   // console.log(BASEHTML(this).attr() );
-        //   promises.push(getJSONData(false,i));
-        // } else {
-        //   console.log('not changed');
-        // }
-        // return resolve(BASEHTML);
-      }, (error) => {
-        return reject();
-      });
+  var NEW_BASEHEML;
+  
+  BASEHTML("img").each( async function () {
+    var old_src = BASEHTML(this).attr("src");
+    ImageSrcArray.push(old_src);
+   });
+  async function f() {
+    console.log('A')
+    // let promise = new Promise((resolve, reject) => {
+     
+     let promiseSee = await Promise.all(ImageSrcArray.map(async img => {
+      let decodedImage = await BASE_64_CONVERTER(img);
+      // BASEHTML(this).attr("src", decodedImage);
+      // BASEHTML.html().replace(img, decodedImage);;
+      // console.log(BASEHTML.html().toString().replace(img, decodedImage) );
+      BASEHTML = cheerio.load( BASEHTML.html().toString().replace(img, decodedImage) );
+      // console.log(img);
+      return decodedImage;
+     })
+    );
+    // console.log(promiseSee)
+    
 
-      // return Promise.all(promise);
-    });
-     resolve(BASEHTML);
+  }
+  
+  f().then((result1)=> {
 
-  });
-
+    console.log('B', BASEHTML.html() )
+    
+  
   var EXTRACT_INFO = new Promise((resolve, reject) => {
     BASEHTML('.question_basic').find("div > .question_text ").each(function (index, element) {
       // list.push(BASEHTML(element).html());
@@ -88,7 +96,7 @@ router.post("/", function (req, res, next) {
 
 
       var temp_sub_document = {
-        question: "<code>" + QUESTION.toString().split('"').join("'") + "</code>",
+        question: QUESTION.toString().split('"').join("'").replace(/\n/g, " ") ,
         options: OPTIONS,
         explanation: EXPLANATION.toString().split('"').join("'"),
       };
@@ -105,24 +113,18 @@ router.post("/", function (req, res, next) {
     return resolve();
   });
 
-  Promise.all(promises).then(() => {
+}).then((result2)=> {
+  console.log('C', CombinedArray)
+  res.render('display_json', { data: JSON.stringify(CombinedArray) });
+  // res.send( JSON.stringify(CombinedArray) );
+});
 
-
-    DECODE_IMAGE.then((data) => {
-      // res.send( BASEHTML.html() );
-      res.render('display_json', { data: JSON.stringify(CombinedArray) })
-    })
-  })
-  // var myExtraction = Promise.all([DECODE_IMAGE, EXTRACT_INFO]);
-  // myExtraction.then(data => {
-  //   res.send( JSON.stringify(CombinedArray) );
-  // });
 
 });
 
 
 
-var BASE_64_CONVERTER = function (old_src) {
+ function BASE_64_CONVERTER (old_src) {
   return new Promise(function (resolve, reject) {
     // base64Img.requestBase64(old_src, function(err, res, base64data) {
     //   if (err) {
@@ -137,8 +139,9 @@ var BASE_64_CONVERTER = function (old_src) {
       if (!error && response.statusCode == 200) {
         data = "data:" + response.headers["content-type"] + ";base64," + new Buffer(body).toString('base64');
         // console.log("#####################################", data);
-        console.log('Resolved Image')
-        return resolve(data);
+        // console.log('Resolved Image');
+        // console.log(data);
+       return resolve(data);
       } else {
         console.log('Rejected Image')
         return reject(old_src);
