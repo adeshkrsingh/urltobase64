@@ -9,138 +9,287 @@ var request = require('request').defaults({ encoding: null });
 /* GET home page. */
 
 router.get("/", function (req, res, next) {
-
   res.render("index", { title: "Express" });
 });
 
 
 
 
+/* GET home page. */
+
+router.get("/tp-simple-question", function (req, res, next) {
+  res.render("fetch/tp_simple_question", { title: "Express" });
+});
+
+
+router.post("/tp-simple-question", function (req, res, next) {
+
+    var QUESTION = "";
+    var PARAGRAPH_TEXT = "";
+    var OPTIONS = [];
+    var OptionNumber = 0;
+    var EXPLANATION = "";
+    var CombinedArray = [];
+    var ImageSrcArray = [];
+
+    var tags = req.body.tags;
+      var tagsObject = [];
+
+    var j = 0;
+      if (tags !== undefined) {
+          tags.forEach(function (value) {
+              tagsObject[j] = {};
+              if (value === undefined) {
+                  // to be handled by default value
+              }
+              else {
+                  tagsObject[j]['tag_text'] = value;
+              }
+              j++;
+          });
+      }
+
+    let BASEHTML = cheerio.load((req.body.content) );
+
+    BASEHTML("img").each( async function () {
+      var old_src = BASEHTML(this).attr("src");
+      ImageSrcArray.push(old_src);
+    });
+    async function f() {
+      let promiseSee = await Promise.all(ImageSrcArray.map(async img => {
+        let decodedImage = await BASE_64_CONVERTER(img);
+        BASEHTML = cheerio.load( BASEHTML.html().toString().replace(img, decodedImage) );
+        return decodedImage;
+      })
+      );
+    }
+
+    f().then((result1)=> {
+    var EXTRACT_INFO = new Promise((resolve, reject) => {
+
+      /* Extracting Each Questions One by One */
+      BASEHTML('.question_basic').find("div > .question_text ").each(function (index, element) {
+        QUESTION = BASEHTML(element).html();
+
+        /* Extracting Options associated with each question */
+        var correctOptionCounter = 0;
+        var is_multicorrect = 0;
+        BASEHTML(this).parent().find('div > table > tbody > tr >  .option_text').each(function (i, elemt) {
+          OptionNumber++;
+          let ch = BASEHTML(this).parent().find('.q_tbl_optn_col_1 > i').each(function (i3, e3) {
+            console.log('Correct Opt : ', OptionNumber, BASEHTML(e3).attr('data-original-title').trim());
+            // This is correct option detected
+          });
+          if (ch == '') {
+            OPTIONS.push({ option_text: BASEHTML(elemt).text().trim(), is_correct: false, });
+          } else {
+            OPTIONS.push({ option_text: BASEHTML(elemt).text().trim(), is_correct: true, });
+            correctOptionCounter++;
+          }
+        });
+        /* / Extracting Options associated with each question */
+
+        /* Checking for multicorrect option */
+        if(correctOptionCounter > 1) {
+          is_multicorrect = 1;
+        }
+        /* / Checking for multicorrect option */
+
+
+        /* Extracting explanation from each question */
+        if (BASEHTML(this).parent().find('.explanation_text').children().first().text().trim().length > 0) {
+          // if multiple tags are used there
+          EXPLANATION = BASEHTML(this).parent().find('.explanation_text').children().first().html().trim();
+        } else {
+          // if it has only explanation
+          EXPLANATION = BASEHTML(this).parent().find('.explanation_text').html().trim();
+        }
+        /* / Extracting explanation from each question */
 
 
 
-router.post("/", function (req, res, next) {
-  console.log("RUNNING POST METHOD");
-  // console.log(req.body);
-  // const $ = cheerio.load( req.body.content );
+        var temp_sub_document = {
+          question_text:  QUESTION.toString().split('"').join("'").replace(/\n/g, " ") ,
+          options: OPTIONS,
+          tags: tagsObject,
+          status: 'draft',
+          paragraph_text: PARAGRAPH_TEXT.toString().split('"').join("'").replace(/\n/g, " ") ,
+          multicorrect: is_multicorrect,
+          explanation: EXPLANATION.toString().split('"').join("'").replace(/\n/g, " ") ,
+        };
+
+
+        CombinedArray.push(temp_sub_document);
+
+        QUESTION = "";
+        options = [];
+        explanation = "";
+        EXPLANATION = "";
+        OPTIONS = [];
+      });
+
+      /* / Extracting Each Questions One by One */
+      return resolve();
+    });
+
+  }).then((result2)=> {
+
+    res.render('display_json', { data: JSON.stringify(CombinedArray) });
+
+  });
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+router.get("/tp-paragraph-question", function (req, res, next) {
+  res.render("fetch/tp_paragraph_question", { title: "Express" });
+});
+
+router.post("/tp-paragraph-question", function (req, res, next) {
 
   var QUESTION = "";
+  var PARAGRAPH_TEXT = "";
   var OPTIONS = [];
-  var correctOpt = 0;
   var OptionNumber = 0;
   var EXPLANATION = "";
   var CombinedArray = [];
   var ImageSrcArray = [];
 
+  var tags = req.body.tags;
+    var tagsObject = [];
+
+  var j = 0;
+    if (tags !== undefined) {
+        tags.forEach(function (value) {
+            tagsObject[j] = {};
+            if (value === undefined) {
+                // to be handled by default value
+            }
+            else {
+                tagsObject[j]['tag_text'] = value;
+            }
+            j++;
+        });
+    }
+
   let BASEHTML = cheerio.load((req.body.content) );
 
-
-
-  var promises = [];
-
-  var NEW_BASEHEML;
-  
   BASEHTML("img").each( async function () {
     var old_src = BASEHTML(this).attr("src");
     ImageSrcArray.push(old_src);
-   });
+  });
   async function f() {
-    console.log('A')
-    // let promise = new Promise((resolve, reject) => {
-     
-     let promiseSee = await Promise.all(ImageSrcArray.map(async img => {
+    let promiseSee = await Promise.all(ImageSrcArray.map(async img => {
       let decodedImage = await BASE_64_CONVERTER(img);
-      // BASEHTML(this).attr("src", decodedImage);
-      // BASEHTML.html().replace(img, decodedImage);;
-      // console.log(BASEHTML.html().toString().replace(img, decodedImage) );
       BASEHTML = cheerio.load( BASEHTML.html().toString().replace(img, decodedImage) );
-      // console.log(img);
       return decodedImage;
-     })
+    })
     );
-    // console.log(promiseSee)
-    
-
   }
-  
+
   f().then((result1)=> {
-
-    console.log('B', BASEHTML.html() )
-    
-  
   var EXTRACT_INFO = new Promise((resolve, reject) => {
-    BASEHTML('.question_basic').find("div > .question_text ").each(function (index, element) {
-      // list.push(BASEHTML(element).html());
-      QUESTION = BASEHTML(element).html();
 
-      BASEHTML(this).parent().find('div > table > tbody > tr >  .option_text').each(function (i, elemt) {
-        OptionNumber++;
-        let ch = BASEHTML(this).parent().find('.q_tbl_optn_col_1 > i').each(function (i3, e3) {
-          console.log('Correct Opt : ', OptionNumber, BASEHTML(e3).attr('data-original-title').trim());
-          // This is correct option detected
+    // paragraph_question question_box question_basic
+
+    BASEHTML('.question_box').find("div > .question_paragraph ").each(function (index, question_box_element) {
+      PARAGRAPH_TEXT = BASEHTML(question_box_element).html();
+
+    /* Extracting Each Questions One by One */
+    BASEHTML(this).parent().find("div > .question_text ").each(function (index, element) {
+        QUESTION = BASEHTML(element).html();
+
+        /* Extracting Options associated with each question */
+        var correctOptionCounter = 0;
+        var is_multicorrect = 0;
+        BASEHTML(this).parent().find('div > table > tbody > tr >  .option_text').each(function (i, elemt) {
+          OptionNumber++;
+          let ch = BASEHTML(this).parent().find('.q_tbl_optn_col_1 > i').each(function (i3, e3) {
+            console.log('Correct Opt : ', OptionNumber, BASEHTML(e3).attr('data-original-title').trim());
+            // This is correct option detected
+          });
+          if (ch == '') {
+            OPTIONS.push({ option_text: BASEHTML(elemt).text().trim(), is_correct: false, });
+          } else {
+            OPTIONS.push({ option_text: BASEHTML(elemt).text().trim(), is_correct: true, });
+            correctOptionCounter++;
+          }
         });
-        if (ch == '') {
-          OPTIONS.push({ opt: BASEHTML(elemt).text().trim(), is_correct: 0, });
-        } else {
-          OPTIONS.push({ opt: BASEHTML(elemt).text().trim(), is_correct: 1, });
+        /* / Extracting Options associated with each question */
+
+        /* Checking for multicorrect option */
+        if(correctOptionCounter > 1) {
+          is_multicorrect = 1;
         }
+        /* / Checking for multicorrect option */
+
+
+        /* Extracting explanation from each question */
+        if (BASEHTML(this).parent().find('.explanation_text').children().first().text().trim().length > 0) {
+          // if multiple tags are used there
+          EXPLANATION = BASEHTML(this).parent().find('.explanation_text').children().first().html().trim();
+        } else {
+          // if it has only explanation
+          EXPLANATION = BASEHTML(this).parent().find('.explanation_text').html().trim();
+        }
+        /* / Extracting explanation from each question */
+
+
+
+        var temp_sub_document = {
+          question_text:  QUESTION.toString().split('"').join("'").replace(/\n/g, " ") ,
+          options: OPTIONS,
+          tags: tagsObject,
+          status: 'draft',
+          paragraph_text: PARAGRAPH_TEXT.toString().split('"').join("'").replace(/\n/g, " ") ,
+          multicorrect: is_multicorrect,
+          explanation: EXPLANATION.toString().split('"').join("'").replace(/\n/g, " ") ,
+        };
+
+
+        CombinedArray.push(temp_sub_document);
+
+        QUESTION = "";
+        options = [];
+        explanation = "";
+        EXPLANATION = "";
+        OPTIONS = [];
       });
 
-      if (BASEHTML(this).parent().find('.explanation_text').children().first().text().trim().length > 0) {
-        // if multiple tags are used there
-        EXPLANATION = BASEHTML(this).parent().find('.explanation_text').children().first().html().trim();
-      } else {
-        // if it has only explanation
-        EXPLANATION = BASEHTML(this).parent().find('.explanation_text').html().trim();
-      }
-
-
-      var temp_sub_document = {
-        question: QUESTION.toString().split('"').join("'").replace(/\n/g, " ") ,
-        options: OPTIONS,
-        explanation: EXPLANATION.toString().split('"').join("'"),
-      };
-
-
-      CombinedArray.push(temp_sub_document);
-
-      QUESTION = "";
-      options = [];
-      explanation = "";
-      EXPLANATION = "";
-      OPTIONS = [];
     });
+
+    /* / Extracting Each Questions One by One */
     return resolve();
   });
 
 }).then((result2)=> {
-  console.log('C', CombinedArray)
+
   res.render('display_json', { data: JSON.stringify(CombinedArray) });
-  // res.send( JSON.stringify(CombinedArray) );
-});
-
 
 });
 
+
+});
 
 
  function BASE_64_CONVERTER (old_src) {
   return new Promise(function (resolve, reject) {
-    // base64Img.requestBase64(old_src, function(err, res, base64data) {
-    //   if (err) {
-    //     // console.log(err);
-    //   } else {
-    //     // console.log(res);
-    //     return resolve(base64data);
-    //   }
-    // });
-
     request.get(old_src, function (error, response, body) {
       if (!error && response.statusCode == 200) {
         data = "data:" + response.headers["content-type"] + ";base64," + new Buffer(body).toString('base64');
-        // console.log("#####################################", data);
-        // console.log('Resolved Image');
-        // console.log(data);
        return resolve(data);
       } else {
         console.log('Rejected Image')
