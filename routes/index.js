@@ -32,8 +32,11 @@ router.post("/tp-simple-question", function (req, res, next) {
     var CombinedArray = [];
     var ImageSrcArray = [];
 
-    var tags = req.body.tags;
-      var tagsObject = [];
+    var t = (req.body.tagsInput);
+    var tags = t.toString().split(',');
+    var tagsObject = [];
+
+    console.log(req.body['tags'])
 
     var j = 0;
       if (tags !== undefined) {
@@ -77,7 +80,7 @@ router.post("/tp-simple-question", function (req, res, next) {
         BASEHTML(this).parent().find('div > table > tbody > tr >  .option_text').each(function (i, elemt) {
           OptionNumber++;
           let ch = BASEHTML(this).parent().find('.q_tbl_optn_col_1 > i').each(function (i3, e3) {
-            console.log('Correct Opt : ', OptionNumber, BASEHTML(e3).attr('data-original-title').trim());
+            // console.log('Correct Opt : ', OptionNumber, BASEHTML(e3).attr('data-original-title').trim());
             // This is correct option detected
           });
           if (ch == '') {
@@ -107,7 +110,7 @@ router.post("/tp-simple-question", function (req, res, next) {
         /* / Extracting explanation from each question */
 
 
-
+        console.log(tagsObject);
         var temp_sub_document = {
           question_text:  QUESTION.toString().split('"').join("'").replace(/\n/g, " ") ,
           options: OPTIONS,

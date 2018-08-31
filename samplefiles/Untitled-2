@@ -1,0 +1,1580 @@
+<div class="report_questions_container">
+                    
+                      
+                        
+                          <div class="question_basic position-relative 
+                            
+                              not_attempted
+                             individual_question" id="" data-topic-name="" data-topic-id="">
+                            
+                            <strong> Question <span class="question_number margin-r-5">1 of 10</span> 
+                              
+                                
+                                  <span class="text-orange"><i class="fa fa-info-circle"></i> You did not attempt this Question. </span>
+                                
+                              
+                            </strong>
+                            <div class="question_text ">
+                            Among a group of 2500 people, 35 percent invest in municipal bonds, 18 percent invest in oil stocks, and 7 percent invest in both municipal bonds and oil stocks. If 1 person is to be randomly selected from 2500 people, what is the probability that the person selected will be one who invests in municipal bonds but not in oil stocks?
+                            </div>
+                            <table class=" question_option_table table no-border thin_row">
+                              
+                              <tbody><tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                    
+                                      <i class="fa fa-check-circle text-green" title="" data-original-title="This is the correct option"></i> 
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>A.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9e8"> 7/25</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>B.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9e9"> 25/7</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>C.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9ea"> 4/25</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>D.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9eb"> 21/25</td>
+                              </tr>
+                              
+                            </tbody></table>
+                            
+                            <strong> Explanation : </strong>
+                            <div class="explanation_text margin-b-10">
+                              Here 2500 is&nbsp;redundant<br><br>From the diagram we know that only ones who invested in municipal bonds are 28%, the probability is 28 / 100 = 7/25<br>
+                            </div>
+                            
+                            <div class="bg-gray padding-5"> 
+                              <div class="text-center"><strong> Question Analytics  </strong></div>
+                              <ul class="clearfix two_row_ul">
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-primary padding-5">2574 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ </span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">Attempted</div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-green padding-5">1691 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-check-circle text-green"></i>
+                                      Solved Correctly
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-red padding-5">883 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-times-circle text-red"></i>
+                                       Solved Incorrectly</div>
+                                  </li>
+                                  <li>
+                                  <div class="padding-t-10 border-bottom">
+                                    <span class="font-16 text-primary padding-5"> 65.7 %</span>
+                                    <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                  </div>
+                                  <div class="text-gray-dark padding-t-5">
+                                    <i class="fa fa-dot-circle-o text-primary"></i>
+                                    Accuracy
+                                  </div>
+                                </li>
+                                <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-primary padding-5">0.0 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-primary"></i>
+                                      Your Time
+                                    </div>
+                                  </li>
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-gray-dark padding-5">1 m 49.72 s</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-gray-dark"></i>
+                                      Avg. Solving Time
+                                    </div>
+                                  </li>
+                                  
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-yellow padding-5">0.4 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-hourglass-half text-yellow"></i>
+                                      Fastest Solving Time
+                                    </div>
+                                  </li>
+                                </ul>
+
+                            </div>
+                          </div>
+                        
+                      
+                    
+                      
+                        
+                          <div class="question_basic position-relative 
+                            
+                              not_attempted
+                             individual_question" id="" data-topic-name="" data-topic-id="">
+                            
+                            <strong> Question <span class="question_number margin-r-5">2 of 10</span> 
+                              
+                                
+                                  <span class="text-orange"><i class="fa fa-info-circle"></i> You did not attempt this Question. </span>
+                                
+                              
+                            </strong>
+                            <div class="question_text ">
+                            Machine A produces bolts at a uniform rate of 120 every 40 second, and Machine B produces bolts at a uniform rate of 100 every 20 seconds. If the two machines run simultaneously, how many seconds will it take for them to produce a total of 200 bolts?
+                            </div>
+                            <table class=" question_option_table table no-border thin_row">
+                              
+                              <tbody><tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                    
+                                      <i class="fa fa-check-circle text-green" title="" data-original-title="This is the correct option"></i> 
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>A.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9ee"> 25 secs</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>B.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9ef"> 20 secs</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>C.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9f0"> 22 secs<br>30 secs</td>
+                              </tr>
+                              
+                            </tbody></table>
+                            
+                            <strong> Explanation : </strong>
+                            <div class="explanation_text margin-b-10">
+                              No explanation provided
+                            </div>
+                            
+                            <div class="bg-gray padding-5"> 
+                              <div class="text-center"><strong> Question Analytics  </strong></div>
+                              <ul class="clearfix two_row_ul">
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-primary padding-5">2927 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ </span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">Attempted</div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-green padding-5">2107 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-check-circle text-green"></i>
+                                      Solved Correctly
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-red padding-5">820 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-times-circle text-red"></i>
+                                       Solved Incorrectly</div>
+                                  </li>
+                                  <li>
+                                  <div class="padding-t-10 border-bottom">
+                                    <span class="font-16 text-primary padding-5"> 71.98 %</span>
+                                    <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                  </div>
+                                  <div class="text-gray-dark padding-t-5">
+                                    <i class="fa fa-dot-circle-o text-primary"></i>
+                                    Accuracy
+                                  </div>
+                                </li>
+                                <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-primary padding-5">4.9 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-primary"></i>
+                                      Your Time
+                                    </div>
+                                  </li>
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-gray-dark padding-5">1 m 31 s</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-gray-dark"></i>
+                                      Avg. Solving Time
+                                    </div>
+                                  </li>
+                                  
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-yellow padding-5">0.2 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-hourglass-half text-yellow"></i>
+                                      Fastest Solving Time
+                                    </div>
+                                  </li>
+                                </ul>
+
+                            </div>
+                          </div>
+                        
+                      
+                    
+                      
+                        
+                          <div class="question_basic position-relative 
+                            
+                              not_attempted
+                             individual_question" id="" data-topic-name="" data-topic-id="">
+                            
+                            <strong> Question <span class="question_number margin-r-5">3 of 10</span> 
+                              
+                                
+                                  <span class="text-orange"><i class="fa fa-info-circle"></i> You did not attempt this Question. </span>
+                                
+                              
+                            </strong>
+                            <div class="question_text ">
+                            Analyzing the good returns that Halocircle Insurance Pvt Ltd was giving, Ratika bought a 1-year, Rs 10,000 certificate of deposit that paid interest at an annual rate of 8% compounded semi-annually. What was the total amount of interest paid on this certificate at maturity?
+                            </div>
+                            <table class=" question_option_table table no-border thin_row">
+                              
+                              <tbody><tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>A.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9f3"> 820</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                    
+                                      <i class="fa fa-check-circle text-green" title="" data-original-title="This is the correct option"></i> 
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>B.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9f4"> 816</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>C.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9f5"> 824</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>D.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9f6"> 806</td>
+                              </tr>
+                              
+                            </tbody></table>
+                            
+                            <strong> Explanation : </strong>
+                            <div class="explanation_text margin-b-10">
+                              In the case of semi annual compounding, Interest rate becomes half and Number of periods becomes 2 per year.<br>So A = P(1+R/100)^n.<br>=&gt; A=10,000(1+4/100)^2.<br>         = 10,000×(26/25)^2.<br>         = 10,816.<br>So, Interest = A - P = 10, 816 - 10,000 = 816.<br>
+                            </div>
+                            
+                            <div class="bg-gray padding-5"> 
+                              <div class="text-center"><strong> Question Analytics  </strong></div>
+                              <ul class="clearfix two_row_ul">
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-primary padding-5">2392 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ </span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">Attempted</div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-green padding-5">1254 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-check-circle text-green"></i>
+                                      Solved Correctly
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-red padding-5">1138 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-times-circle text-red"></i>
+                                       Solved Incorrectly</div>
+                                  </li>
+                                  <li>
+                                  <div class="padding-t-10 border-bottom">
+                                    <span class="font-16 text-primary padding-5"> 52.42 %</span>
+                                    <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                  </div>
+                                  <div class="text-gray-dark padding-t-5">
+                                    <i class="fa fa-dot-circle-o text-primary"></i>
+                                    Accuracy
+                                  </div>
+                                </li>
+                                <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-primary padding-5">0.0 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-primary"></i>
+                                      Your Time
+                                    </div>
+                                  </li>
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-gray-dark padding-5">1 m 25.64 s</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-gray-dark"></i>
+                                      Avg. Solving Time
+                                    </div>
+                                  </li>
+                                  
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-yellow padding-5">0.1 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-hourglass-half text-yellow"></i>
+                                      Fastest Solving Time
+                                    </div>
+                                  </li>
+                                </ul>
+
+                            </div>
+                          </div>
+                        
+                      
+                    
+                      
+                        
+                          <div class="question_basic position-relative 
+                            
+                              not_attempted
+                             individual_question" id="" data-topic-name="" data-topic-id="">
+                            
+                            <strong> Question <span class="question_number margin-r-5">4 of 10</span> 
+                              
+                                
+                                  <span class="text-orange"><i class="fa fa-info-circle"></i> You did not attempt this Question. </span>
+                                
+                              
+                            </strong>
+                            <div class="question_text ">
+                            Juan is a gold medalist in athletics. In the month of May, if Juan takes 11 seconds to run y yards, how many seconds will it take him to run x yards at the same rate?
+                            </div>
+                            <table class=" question_option_table table no-border thin_row">
+                              
+                              <tbody><tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>A.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9f9"> 11/y</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>B.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9fa"> 11xy</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                    
+                                      <i class="fa fa-check-circle text-green" title="" data-original-title="This is the correct option"></i> 
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>C.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9fb"> 11x/ y.</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>D.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9fc"> 11y/x</td>
+                              </tr>
+                              
+                            </tbody></table>
+                            
+                            <strong> Explanation : </strong>
+                            <div class="explanation_text margin-b-10">
+                              If juan takes 11 seconds to run Y yards, for 1 yard he will take 11 / y seconds.<br>To run x yards his time will be ( 11 / y )&nbsp;×&nbsp;x = 11x/ y.
+                            </div>
+                            
+                            <div class="bg-gray padding-5"> 
+                              <div class="text-center"><strong> Question Analytics  </strong></div>
+                              <ul class="clearfix two_row_ul">
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-primary padding-5">3122 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ </span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">Attempted</div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-green padding-5">2450 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-check-circle text-green"></i>
+                                      Solved Correctly
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-red padding-5">672 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-times-circle text-red"></i>
+                                       Solved Incorrectly</div>
+                                  </li>
+                                  <li>
+                                  <div class="padding-t-10 border-bottom">
+                                    <span class="font-16 text-primary padding-5"> 78.48 %</span>
+                                    <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                  </div>
+                                  <div class="text-gray-dark padding-t-5">
+                                    <i class="fa fa-dot-circle-o text-primary"></i>
+                                    Accuracy
+                                  </div>
+                                </li>
+                                <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-primary padding-5">0.0 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-primary"></i>
+                                      Your Time
+                                    </div>
+                                  </li>
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-gray-dark padding-5">47.17 secs</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-gray-dark"></i>
+                                      Avg. Solving Time
+                                    </div>
+                                  </li>
+                                  
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-yellow padding-5">0.1 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-hourglass-half text-yellow"></i>
+                                      Fastest Solving Time
+                                    </div>
+                                  </li>
+                                </ul>
+
+                            </div>
+                          </div>
+                        
+                      
+                    
+                      
+                        
+                          <div class="question_basic position-relative 
+                            
+                              not_attempted
+                             individual_question" id="" data-topic-name="" data-topic-id="">
+                            
+                            <strong> Question <span class="question_number margin-r-5">5 of 10</span> 
+                              
+                                
+                                  <span class="text-orange"><i class="fa fa-info-circle"></i> You did not attempt this Question. </span>
+                                
+                              
+                            </strong>
+                            <div class="question_text ">
+                            Of the following, which is the closest approximation of (50.2*0.49)/199.8 ?
+                            </div>
+                            <table class=" question_option_table table no-border thin_row">
+                              
+                              <tbody><tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                    
+                                      <i class="fa fa-check-circle text-green" title="" data-original-title="This is the correct option"></i> 
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>A.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9f9ff"> 0.125</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>B.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa00"> 1.254</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>C.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa01"> 0.025</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>D.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa02"> 0.123</td>
+                              </tr>
+                              
+                            </tbody></table>
+                            
+                            <strong> Explanation : </strong>
+                            <div class="explanation_text margin-b-10">
+                              For approximation (50.2×0.49)/199.8 can be taken as  50 × 0.5 / 200 = 25/200 = 1/8 = 0.125.<br>
+                            </div>
+                            
+                            <div class="bg-gray padding-5"> 
+                              <div class="text-center"><strong> Question Analytics  </strong></div>
+                              <ul class="clearfix two_row_ul">
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-primary padding-5">2986 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ </span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">Attempted</div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-green padding-5">1152 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-check-circle text-green"></i>
+                                      Solved Correctly
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-red padding-5">1834 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-times-circle text-red"></i>
+                                       Solved Incorrectly</div>
+                                  </li>
+                                  <li>
+                                  <div class="padding-t-10 border-bottom">
+                                    <span class="font-16 text-primary padding-5"> 38.58 %</span>
+                                    <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                  </div>
+                                  <div class="text-gray-dark padding-t-5">
+                                    <i class="fa fa-dot-circle-o text-primary"></i>
+                                    Accuracy
+                                  </div>
+                                </li>
+                                <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-primary padding-5">0.0 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-primary"></i>
+                                      Your Time
+                                    </div>
+                                  </li>
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-gray-dark padding-5">1 m 3.69 s</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-gray-dark"></i>
+                                      Avg. Solving Time
+                                    </div>
+                                  </li>
+                                  
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-yellow padding-5">0.2 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-hourglass-half text-yellow"></i>
+                                      Fastest Solving Time
+                                    </div>
+                                  </li>
+                                </ul>
+
+                            </div>
+                          </div>
+                        
+                      
+                    
+                      
+                        
+                          <div class="question_basic position-relative 
+                            
+                              not_attempted
+                             individual_question" id="" data-topic-name="" data-topic-id="">
+                            
+                            <strong> Question <span class="question_number margin-r-5">6 of 10</span> 
+                              
+                                
+                                  <span class="text-orange"><i class="fa fa-info-circle"></i> You did not attempt this Question. </span>
+                                
+                              
+                            </strong>
+                            <div class="question_text ">
+                            Andalusia has been promoting the importance of health maintenance. From January 1,1991 to January 1,1993, the number of people enrolled in health maintenance organizations increased by 15 percent. The enrollment on January 1,1993 was 45 million. How many million people(to the nearest million) was enrolled in health maintenance organizations on January 1,1991?
+                            </div>
+                            <table class=" question_option_table table no-border thin_row">
+                              
+                              <tbody><tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>A.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa05"> 33. 73 million</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>B.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa06"> 37.5 million</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                    
+                                      <i class="fa fa-check-circle text-green" title="" data-original-title="This is the correct option"></i> 
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>C.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa07"> 39.13 million</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>D.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa08"> 40 million</td>
+                              </tr>
+                              
+                            </tbody></table>
+                            
+                            <strong> Explanation : </strong>
+                            <div class="explanation_text margin-b-10">
+                              No explanation provided
+                            </div>
+                            
+                            <div class="bg-gray padding-5"> 
+                              <div class="text-center"><strong> Question Analytics  </strong></div>
+                              <ul class="clearfix two_row_ul">
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-primary padding-5">2799 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ </span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">Attempted</div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-green padding-5">1542 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-check-circle text-green"></i>
+                                      Solved Correctly
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-red padding-5">1257 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-times-circle text-red"></i>
+                                       Solved Incorrectly</div>
+                                  </li>
+                                  <li>
+                                  <div class="padding-t-10 border-bottom">
+                                    <span class="font-16 text-primary padding-5"> 55.09 %</span>
+                                    <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                  </div>
+                                  <div class="text-gray-dark padding-t-5">
+                                    <i class="fa fa-dot-circle-o text-primary"></i>
+                                    Accuracy
+                                  </div>
+                                </li>
+                                <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-primary padding-5">0.0 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-primary"></i>
+                                      Your Time
+                                    </div>
+                                  </li>
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-gray-dark padding-5">1 m 28.39 s</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-gray-dark"></i>
+                                      Avg. Solving Time
+                                    </div>
+                                  </li>
+                                  
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-yellow padding-5">0.6 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-hourglass-half text-yellow"></i>
+                                      Fastest Solving Time
+                                    </div>
+                                  </li>
+                                </ul>
+
+                            </div>
+                          </div>
+                        
+                      
+                    
+                      
+                        
+                          <div class="question_basic position-relative 
+                            
+                              not_attempted
+                             individual_question" id="" data-topic-name="" data-topic-id="">
+                            
+                            <strong> Question <span class="question_number margin-r-5">7 of 10</span> 
+                              
+                                
+                                  <span class="text-orange"><i class="fa fa-info-circle"></i> You did not attempt this Question. </span>
+                                
+                              
+                            </strong>
+                            <div class="question_text ">
+                            What is the lowest possible integer that is divisible by each of the integers 1 through 7, inclusive?
+                            </div>
+                            <table class=" question_option_table table no-border thin_row">
+                              
+                              <tbody><tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>A.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa0b"> 450</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                    
+                                      <i class="fa fa-check-circle text-green" title="" data-original-title="This is the correct option"></i> 
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>B.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa0c"> 420</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>C.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa0d"> 400</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>D.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa0e"> 432</td>
+                              </tr>
+                              
+                            </tbody></table>
+                            
+                            <strong> Explanation : </strong>
+                            <div class="explanation_text margin-b-10">
+                              If a number has to be divisible by each number from 1 to 7, that number should be L.C.M of (1,2,3,4,5,6,7) = 420.
+                            </div>
+                            
+                            <div class="bg-gray padding-5"> 
+                              <div class="text-center"><strong> Question Analytics  </strong></div>
+                              <ul class="clearfix two_row_ul">
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-primary padding-5">3034 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ </span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">Attempted</div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-green padding-5">2487 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-check-circle text-green"></i>
+                                      Solved Correctly
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-red padding-5">547 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-times-circle text-red"></i>
+                                       Solved Incorrectly</div>
+                                  </li>
+                                  <li>
+                                  <div class="padding-t-10 border-bottom">
+                                    <span class="font-16 text-primary padding-5"> 81.97 %</span>
+                                    <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                  </div>
+                                  <div class="text-gray-dark padding-t-5">
+                                    <i class="fa fa-dot-circle-o text-primary"></i>
+                                    Accuracy
+                                  </div>
+                                </li>
+                                <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-primary padding-5">0.0 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-primary"></i>
+                                      Your Time
+                                    </div>
+                                  </li>
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-gray-dark padding-5">45.41 secs</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-gray-dark"></i>
+                                      Avg. Solving Time
+                                    </div>
+                                  </li>
+                                  
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-yellow padding-5">0.1 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-hourglass-half text-yellow"></i>
+                                      Fastest Solving Time
+                                    </div>
+                                  </li>
+                                </ul>
+
+                            </div>
+                          </div>
+                        
+                      
+                    
+                      
+                        
+                          <div class="question_basic position-relative 
+                            
+                              not_attempted
+                             individual_question" id="" data-topic-name="" data-topic-id="">
+                            
+                            <strong> Question <span class="question_number margin-r-5">8 of 10</span> 
+                              
+                                
+                                  <span class="text-orange"><i class="fa fa-info-circle"></i> You did not attempt this Question. </span>
+                                
+                              
+                            </strong>
+                            <div class="question_text ">
+                            If the area of a square region having sides of length 6 cms is equal to the area of a rectangular region having width 2.5 cms, then the length of the rectangle, in cms, is
+                            </div>
+                            <table class=" question_option_table table no-border thin_row">
+                              
+                              <tbody><tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>A.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa11"> 12.6 cm</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>B.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa12"> 13.5 cm</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>C.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa13"> 15 cm</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                    
+                                      <i class="fa fa-check-circle text-green" title="" data-original-title="This is the correct option"></i> 
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>D.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa14"> 14.4 cm</td>
+                              </tr>
+                              
+                            </tbody></table>
+                            
+                            <strong> Explanation : </strong>
+                            <div class="explanation_text margin-b-10">
+                              Given,  Area of the square = Area of rectangle.<br>=&gt; a^2 = length * breadth.<br>Since, side of square = 6 cm, width of rectangle = 2.5cm.<br>Substituting the above values in the formula, <br>=&gt; 6^2 =  length x 2.5<br>=&gt;  length = 14.4 cm.<br>
+                            </div>
+                            
+                            <div class="bg-gray padding-5"> 
+                              <div class="text-center"><strong> Question Analytics  </strong></div>
+                              <ul class="clearfix two_row_ul">
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-primary padding-5">3069 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ </span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">Attempted</div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-green padding-5">2394 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-check-circle text-green"></i>
+                                      Solved Correctly
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-red padding-5">675 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-times-circle text-red"></i>
+                                       Solved Incorrectly</div>
+                                  </li>
+                                  <li>
+                                  <div class="padding-t-10 border-bottom">
+                                    <span class="font-16 text-primary padding-5"> 78.01 %</span>
+                                    <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                  </div>
+                                  <div class="text-gray-dark padding-t-5">
+                                    <i class="fa fa-dot-circle-o text-primary"></i>
+                                    Accuracy
+                                  </div>
+                                </li>
+                                <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-primary padding-5">0.0 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-primary"></i>
+                                      Your Time
+                                    </div>
+                                  </li>
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-gray-dark padding-5">54.36 secs</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-gray-dark"></i>
+                                      Avg. Solving Time
+                                    </div>
+                                  </li>
+                                  
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-yellow padding-5">0.2 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-hourglass-half text-yellow"></i>
+                                      Fastest Solving Time
+                                    </div>
+                                  </li>
+                                </ul>
+
+                            </div>
+                          </div>
+                        
+                      
+                    
+                      
+                        
+                          <div class="question_basic position-relative 
+                            
+                              not_attempted
+                             individual_question" id="" data-topic-name="" data-topic-id="">
+                            
+                            <strong> Question <span class="question_number margin-r-5">9 of 10</span> 
+                              
+                                
+                                  <span class="text-orange"><i class="fa fa-info-circle"></i> You did not attempt this Question. </span>
+                                
+                              
+                            </strong>
+                            <div class="question_text ">
+                            A tank contains 10,000 gallons of a solution that is 5 percent sodium chloride by volume. If 2500 gallons of water evaporate from the tank, the remaining solution will be approximately what percentage of sodium chloride?
+                            </div>
+                            <table class=" question_option_table table no-border thin_row">
+                              
+                              <tbody><tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>A.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa17"> 6.32%</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>B.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa18"> 8.4%</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                    
+                                      <i class="fa fa-check-circle text-green" title="" data-original-title="This is the correct option"></i> 
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>C.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa19"> 6.67 %</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>D.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa1a"> 7.5%</td>
+                              </tr>
+                              
+                            </tbody></table>
+                            
+                            <strong> Explanation : </strong>
+                            <div class="explanation_text margin-b-10">
+                              Sodium chloride in the original solution = 5% of 10,000 = 500.<br>Water in the original solution = 10,000 - 500 = 9,500.<br>If 2,500 Liters of the water is&nbsp;evaporated&nbsp;then the remaining water = 9,500 - 2,500 = 7,000<br>Sodium chloride concentration =&nbsp;500500+7000×100&nbsp;= 6.67 %<br>(concentration should be calculated always on the total&nbsp;volume)<br>
+                            </div>
+                            
+                            <div class="bg-gray padding-5"> 
+                              <div class="text-center"><strong> Question Analytics  </strong></div>
+                              <ul class="clearfix two_row_ul">
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-primary padding-5">2714 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ </span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">Attempted</div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-green padding-5">1496 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-check-circle text-green"></i>
+                                      Solved Correctly
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-red padding-5">1218 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-times-circle text-red"></i>
+                                       Solved Incorrectly</div>
+                                  </li>
+                                  <li>
+                                  <div class="padding-t-10 border-bottom">
+                                    <span class="font-16 text-primary padding-5"> 55.12 %</span>
+                                    <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                  </div>
+                                  <div class="text-gray-dark padding-t-5">
+                                    <i class="fa fa-dot-circle-o text-primary"></i>
+                                    Accuracy
+                                  </div>
+                                </li>
+                                <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-primary padding-5">0.0 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-primary"></i>
+                                      Your Time
+                                    </div>
+                                  </li>
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-gray-dark padding-5">1 m 36.38 s</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-gray-dark"></i>
+                                      Avg. Solving Time
+                                    </div>
+                                  </li>
+                                  
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-yellow padding-5">0.2 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-hourglass-half text-yellow"></i>
+                                      Fastest Solving Time
+                                    </div>
+                                  </li>
+                                </ul>
+
+                            </div>
+                          </div>
+                        
+                      
+                    
+                      
+                        
+                          <div class="question_basic position-relative 
+                            
+                              not_attempted
+                             individual_question" id="" data-topic-name="" data-topic-id="">
+                            
+                            <strong> Question <span class="question_number margin-r-5">10 of 10</span> 
+                              
+                                
+                                  <span class="text-orange"><i class="fa fa-info-circle"></i> You did not attempt this Question. </span>
+                                
+                              
+                            </strong>
+                            <div class="question_text ">
+                            After loading a dock, each worker on the night crew loaded 3/4 as many boxes as each worker on the day of the crew. If the night crew has 4/5 as many workers as the day crew, what fraction of all the boxes loaded by two crews did the day crew load?
+                            </div>
+                            <table class=" question_option_table table no-border thin_row">
+                              
+                              <tbody><tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                    
+                                      <i class="fa fa-check-circle text-green" title="" data-original-title="This is the correct option"></i> 
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>A.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa1d"> 5/8</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>B.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa1e"> 5/4</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>C.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa1f"> 1/4</td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="q_tbl_optn_col_1"> 
+                                  
+                                </td>
+                                <td class="q_tbl_optn_col_1">
+                                   
+                                     
+                                   
+                                </td>
+                                <td class="q_tbl_optn_col_2"> <strong>D.</strong> </td>
+                                <td class="q_tbl_optn_col_3 option_text" data-option-id="56b250452527e4281dd9fa20"> 3/8</td>
+                              </tr>
+                              
+                            </tbody></table>
+                            
+                            <strong> Explanation : </strong>
+                            <div class="explanation_text margin-b-10">
+                              Assume the number of boxes loaded in dayshift is equal to 4, then the number of boxed loaded in night shift = 3<br>Assume the worked on dayshift = 5, then workers on night shift = 4.<br>So boxes loaded in day shift = 4 x 5 = 20, and boxes loaded in night shift = 3 x 4 = 12<br>So fraction of boxes loaded in day shift =&nbsp;20/(20+12)=5/8<br>
+                            </div>
+                            
+                            <div class="bg-gray padding-5"> 
+                              <div class="text-center"><strong> Question Analytics  </strong></div>
+                              <ul class="clearfix two_row_ul">
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-primary padding-5">2287 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ </span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">Attempted</div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10  border-bottom">
+                                      <span class="font-14 text-green padding-5">939 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-check-circle text-green"></i>
+                                      Solved Correctly
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-red padding-5">1348 users</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                       <i class="fa fa-times-circle text-red"></i>
+                                       Solved Incorrectly</div>
+                                  </li>
+                                  <li>
+                                  <div class="padding-t-10 border-bottom">
+                                    <span class="font-16 text-primary padding-5"> 41.06 %</span>
+                                    <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                  </div>
+                                  <div class="text-gray-dark padding-t-5">
+                                    <i class="fa fa-dot-circle-o text-primary"></i>
+                                    Accuracy
+                                  </div>
+                                </li>
+                                <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-primary padding-5">0.0 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-primary"></i>
+                                      Your Time
+                                    </div>
+                                  </li>
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-gray-dark padding-5">1 m 29.99 s</span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-clock-o text-gray-dark"></i>
+                                      Avg. Solving Time
+                                    </div>
+                                  </li>
+                                  
+
+                                  <li>
+                                    <div class="padding-t-10 border-bottom">
+                                      <span class="font-14 text-yellow padding-5">0.1 secs </span>
+                                      <!-- <span class="font-12 text-gray-dark">/ 20</span> -->
+                                    </div>
+                                    <div class="text-gray-dark padding-t-5">
+                                      <i class="fa fa-hourglass-half text-yellow"></i>
+                                      Fastest Solving Time
+                                    </div>
+                                  </li>
+                                </ul>
+
+                            </div>
+                          </div>
+                        
+                      
+                    
+                  </div>
