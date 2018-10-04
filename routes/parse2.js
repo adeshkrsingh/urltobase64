@@ -146,12 +146,12 @@ router.get("/1", function(req, res, next) {
     let promiseSee = await Promise.all(
       ImageSrcArray.map(async img => {
         let decodedImage = await BASE_64_CONVERTER(img);
-        // BASEHTML = cheerio.load(
-        //   BASEHTML.html()
-        //     .toString()
-        //     .replace(img, decodedImage)
-        // );
-        // console.log("Base64 images : ", decodedImage);
+        BASEHTML = cheerio.load(
+          BASEHTML.html()
+            .toString()
+            .replace(img, decodedImage)
+        );
+        console.log("Base64 images : ", decodedImage);
         return decodedImage;
       })
     );
@@ -163,21 +163,12 @@ router.get("/1", function(req, res, next) {
       var EXTRACT_INFO = new Promise((resolve, reject) => {
 
         /* Extracting Each Questions One by One */
-        // BASEHTML("table > tbody > tr > #complete_question_content > table > tbody > tr")
-        // //   .find("div > .question_text ")
-        //   .each(function(index, element) {
-        //     QUESTION = BASEHTML(element).html();
-        //     console.log("Question Here :", QUESTION);
-        //   });
-
-
-          /* Extracting Each Questions One by One */
-        // BASEHTML("table > tbody > tr > #complete_question_content > #optionsViewDiv")
-        // //   .find("div > .question_text ")
-        // .each(function(index, element) {
-        //     QUESTION = BASEHTML(element).html();
-        //     console.log("Question Here :", QUESTION);
-        // });
+        BASEHTML("table > tbody > tr > #complete_question_content > table > tbody > tr")
+        //   .find("div > .question_text ")
+          .each(function(index, element) {
+            QUESTION = BASEHTML(element).html();
+            // console.log("Question Here :", QUESTION);
+          });
 
         var correctOpt;
         var optionArray = [];
@@ -192,17 +183,19 @@ router.get("/1", function(req, res, next) {
 
                 BASEHTML("table > tbody > tr > #complete_question_content > #optionsViewDiv > table > tbody > tr >td")
                 .each(function(index2, element2) {
-                    console.log
-                    if(index2 == (correctOpt * 2) ) {
+                    // console.log(index2, parseInt(correctOpt) )
+                    if( (index2 == (parseInt(correctOpt) * 2) -1 ) && (index2 % 2 != 0) ) {
                         var optionObject = {
                             option_text: BASEHTML(element2).html(),
                             is_correct: true,
+                            is_correct2: index2 + " " + parseInt(correctOpt),
                         };
                         optionArray.push(optionObject);
-                    } else {
+                    } else if (index2 % 2 != 0) {
                         var optionObject = {
                             option_text: BASEHTML(element2).html(),
                             is_correct: false,
+                            is_correct2: index2 + " " + parseInt(correctOpt),
                         };
                         optionArray.push(optionObject);
                     }
@@ -210,100 +203,12 @@ router.get("/1", function(req, res, next) {
             }
         });
 
-        QUESTION = optionArray;
+        
 
-            // QUESTION = BASEHTML("table > tbody > tr > #complete_question_content > div > u");
-        //   .find("div > .question_text ")
-
-        //     /* Extracting Options associated with each question */
-        //     var correctOptionCounter = 0;
-        //     var is_multicorrect = 0;
-        //     BASEHTML(this)
-        //       .parent()
-        //       .find("div > table > tbody > tr >  .option_text")
-        //       .each(function(i, elemt) {
-        //         OptionNumber++;
-        //         let ch = BASEHTML(this)
-        //           .parent()
-        //           .find(".q_tbl_optn_col_1 > i")
-        //           .each(function(i3, e3) {
-        //             // console.log('Correct Opt : ', OptionNumber, BASEHTML(e3).attr('data-original-title').trim());
-        //             // This is correct option detected
-        //           });
-        //         if (ch == "") {
-        //           OPTIONS.push({
-        //             option_text: BASEHTML(elemt)
-        //               .text()
-        //               .trim(),
-        //             is_correct: false
-        //           });
-        //         } else {
-        //           OPTIONS.push({
-        //             option_text: BASEHTML(elemt)
-        //               .text()
-        //               .trim(),
-        //             is_correct: true
-        //           });
-        //           correctOptionCounter++;
-        //         }
-        //       });
-        //     /* / Extracting Options associated with each question */
-
-        //     /* Checking for multicorrect option */
-        //     if (correctOptionCounter > 1) {
-        //       is_multicorrect = 1;
-        //     }
-        //     /* / Checking for multicorrect option */
-
-        //     /* Extracting explanation from each question */
-        //     if (
-        //       BASEHTML(this)
-        //         .parent()
-        //         .find(".explanation_text")
-        //         .children()
-        //         .first()
-        //         .text()
-        //         .trim().length > 0
-        //     ) {
-        //       // if multiple tags are used there
-        //       EXPLANATION = BASEHTML(this)
-        //         .parent()
-        //         .find(".explanation_text")
-        //         .children()
-        //         .first()
-        //         .html()
-        //         .trim();
-        //     } else {
-        //       // if it has only explanation
-        //       EXPLANATION = BASEHTML(this)
-        //         .parent()
-        //         .find(".explanation_text")
-        //         .html()
-        //         .trim();
-        //     }
-        //     /* / Extracting explanation from each question */
-
-        //     console.log(tagsObject);
-        //     var temp_sub_document = {
-        //       question_text: QUESTION.toString()
-        //         .split('"')
-        //         .join("'")
-        //         .replace(/\n/g, " "),
-        //       options: OPTIONS,
-        //       tags: tagsObject,
-        //       status: "draft",
-        //       paragraph_text: PARAGRAPH_TEXT.toString()
-        //         .split('"')
-        //         .join("'")
-        //         .replace(/\n/g, " "),
-        //       multicorrect: is_multicorrect,
-        //       explanation: EXPLANATION.toString()
-        //         .split('"')
-        //         .join("'")
-        //         .replace(/\n/g, " ")
-        //     };
-
-        //     CombinedArray.push(temp_sub_document);
+            CombinedArray.push({
+                question_text: QUESTION,
+                options: optionArray
+            });
 
         //     QUESTION = "";
         //     options = [];
@@ -317,8 +222,8 @@ router.get("/1", function(req, res, next) {
       });
     })
     .then(result2 => {
-        console.log("Second then called...", QUESTION);
-      res.render("display_json", { data: QUESTION });
+        // console.log("Second then called...", CombinedArray);
+      res.render("display_json", { data: JSON.stringify(CombinedArray) });
     });
 });
 
